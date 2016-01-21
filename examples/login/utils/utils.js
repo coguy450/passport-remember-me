@@ -13,3 +13,14 @@ exports.randomString = function(len) {
 function getRandomInt(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
+
+
+exports.merge = function(a, b){
+  if (a && b) {
+    for (var key in b) {
+      a[key] = b[key];
+    }
+  }
+  return a;
+};
+
